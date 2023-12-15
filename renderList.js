@@ -32,10 +32,17 @@ class RenderList {
       const parentElement = document.querySelector("#pokemon-list");
       const newElement = document.querySelector(".newElement");
 
+      const loadingElements = document.querySelectorAll(".loading");
+
+      loadingElements.forEach((element) => {
+        element.remove();
+      });
+
       if (newElement) {
         newElement.replaceWith(newList);
       } else {
         parentElement.appendChild(newList);
+        console.log(newList);
       }
     }
   }

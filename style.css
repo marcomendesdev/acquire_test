@@ -81,17 +81,11 @@ header .navigation {
   text-align: center;
 }
 
-.fallBackList {
+.fb {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
-.fallBackList h1 {
-  color: #4e4e4e;
-}
-
-.loading {
+.loading li {
   width: 100%;
   max-width: 350px;
   height: 350px;

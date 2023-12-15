@@ -25,7 +25,18 @@ const renderApp = async () => {
 <main>
 <div class="app-width">
     <div id="pokemon-list" aria-live="polite">
-        <!-- Pokemon list goes here -->
+        
+            <ul class="loading"><li><h1>LOading...</h1></l1>
+            <li><h1>LOading...</h1></l1>
+            <li><h1>LOading...</h1></l1>
+            <li><h1>LOading...</h1></l1>
+            <li><h1>LOading...</h1></l1>
+            <li><h1>LOading...</h1></l1>
+            <li><h1>LOading...</h1></l1>
+            <li><h1>LOading...</h1></l1>
+            <li><h1>LOading...</h1></l1>
+            <ul class="loading"><li><h1>LOading...</h1></l1></ul>
+        
     </div>
     <div id="pokemon-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="pokemon-modal-name">
         <div class="modal-content">
