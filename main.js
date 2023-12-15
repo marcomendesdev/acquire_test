@@ -62,28 +62,4 @@ dataProvider().then((data) => {
     const results = filter.perform(query, "propertyToFilterOn"); 
     renderList(results);
   });
-
-  const prevPageButton = document.querySelector("#prev-page");
-  const nextPageButton = document.querySelector("#next-page");
-
-  prevPageButton.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      pagination.prevPage();
-    }
-  });
-
-  nextPageButton.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      pagination.nextPage();
-    }
-  });
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowLeft") {
-    pagination.prevPage();
-  }
-  if (event.key === "ArrowRight") {
-    pagination.nextPage();
-  }
 });
