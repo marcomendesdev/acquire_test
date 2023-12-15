@@ -8,9 +8,7 @@ import Pagination from "./pagination.js";
 import Search from "./search.js";
 
 renderApp();
-let itemsPerPage = 20;
-let currentPage = 1;
-let pagination; // Declare pagination here
+let pagination;
 
 async function dataProvider() {
   const apiService = new ApiService();
@@ -29,13 +27,7 @@ async function renderList(data) {
 }
 
 dataProvider().then((data) => {
-  pagination = new Pagination( // Assign to pagination here
-    data,
-    itemsPerPage,
-    currentPage,
-    "prev-page",
-    "next-page"
-  );
+  pagination = new Pagination(data);
 
   pagination.dataToRender().then((firstPageData) => {
     renderList(firstPageData);
@@ -51,15 +43,7 @@ dataProvider().then((data) => {
   searchInput.addEventListener("input", async (event) => {
     const query = event.target.value;
     const search = new Search(data);
-    const results = search.perform(query, "name"); 
-    renderList(results);
-  });
-
-  const filterInput = document.querySelector("#filter");
-  filterInput.addEventListener("input", async (event) => {
-    const query = event.target.value;
-    const filter = new Search(data);
-    const results = filter.perform(query, "propertyToFilterOn"); 
+    const results = search.perform(query, "name");
     renderList(results);
   });
 });

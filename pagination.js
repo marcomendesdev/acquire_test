@@ -1,16 +1,10 @@
 class Pagination {
-  constructor(
-    data,
-    itemsPerPage,
-    currentPage,
-    prevPageButtonId,
-    nextPageButtonId
-  ) {
+  constructor(data) {
     this.data = data;
-    this.itemsPerPage = itemsPerPage;
-    this.currentPage = currentPage;
-    this.prevPageButtonId = prevPageButtonId;
-    this.nextPageButtonId = nextPageButtonId;
+    this.itemsPerPage = 20;
+    this.currentPage = 1;
+    this.prevPageButtonId = "prev-page";
+    this.nextPageButtonId = "next-page";
   }
 
   async dataToRender() {
