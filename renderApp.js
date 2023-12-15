@@ -25,6 +25,29 @@ const renderApp = async () => {
 <main>
 <div class="app-width">
     <div id="pokemon-list" aria-live="polite">
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
+        <li class="fallBackList loading"><h1>Loading...</h1></li>
         <!-- Pokemon list goes here -->
     </div>
     <div id="pokemon-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="pokemon-modal-name">

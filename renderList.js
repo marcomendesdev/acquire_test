@@ -7,7 +7,7 @@ class RenderList {
   render() {
     if (this.data.length > 0) {
       const newList = document.createElement("ul");
-      newList.className = "fallBackList";
+      newList.className = "newElement";
 
       for (const itemData of this.data) {
         const listItem = document.createElement("li");
@@ -30,10 +30,10 @@ class RenderList {
       }
 
       const parentElement = document.querySelector("#pokemon-list");
-      const fallBackList = document.querySelector(".fallBackList");
+      const newElement = document.querySelector(".newElement");
 
-      if (fallBackList) {
-        fallBackList.replaceWith(newList);
+      if (newElement) {
+        newElement.replaceWith(newList);
       } else {
         parentElement.appendChild(newList);
       }
