@@ -1,5 +1,5 @@
 const renderApp = async () => {
-  return (document.querySelector("#app").innerHTML = `
+  return (document.querySelector("body").innerHTML = `
 <header>
 <div class="app-width">
     <div class="navigation">
