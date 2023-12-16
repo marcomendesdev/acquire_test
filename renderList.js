@@ -12,6 +12,8 @@ class RenderList {
       for (const itemData of this.data) {
         const listItem = document.createElement("li");
 
+        listItem.setAttribute("tabindex", "0");
+
         const img = document.createElement("img");
         img.src = itemData.image;
         img.alt = itemData.name;
@@ -24,6 +26,27 @@ class RenderList {
 
         listItem.addEventListener("click", () => {
           this.modal.render(itemData);
+        });
+
+        listItem.addEventListener("keydown", (event) => {
+          if (event.key === "Enter") {
+            event.stopPropagation();
+            if (this.modal.modalElement.style.display === "block") {
+              this.modal.close();
+            } else {
+              listItem.click();
+            }
+          } else if (event.key === "ArrowDown") {
+            event.preventDefault();
+            if (listItem.nextElementSibling) {
+              listItem.nextElementSibling.focus();
+            }
+          } else if (event.key === "ArrowUp") {
+            event.preventDefault();
+            if (listItem.previousElementSibling) {
+              listItem.previousElementSibling.focus();
+            }
+          }
         });
 
         newList.appendChild(listItem);
@@ -42,7 +65,6 @@ class RenderList {
         newElement.replaceWith(newList);
       } else {
         parentElement.appendChild(newList);
-        console.log(newList);
       }
     }
   }
